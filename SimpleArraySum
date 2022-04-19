@@ -1,0 +1,38 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace deneme
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            SUM a = new SUM();
+            Console.Write("HOW MANY ELEMENTS ARE THERE IN THE ARRAY : ");
+            a.n = Convert.ToInt32(Console.ReadLine());
+            a.operation(a.n);
+            Console.WriteLine("THE SUM IS : " + a.sum);
+            Console.ReadLine();
+        }
+    }
+    public class SUM
+    {
+        public int sum;
+        public int n;
+        public int operation(int n)
+        {
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("{0} . element is : ", i+1);
+                int a = Convert.ToInt32(Console.ReadLine());
+                sum += a;
+            }
+            return sum;
+        }
+    }
+}
+
